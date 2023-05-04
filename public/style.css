@@ -1,0 +1,286 @@
+body, html,h1,h2,h3,h4,h5,h6,p,span,strong,a{
+    font-family: 'Kanit', sans-serif;
+    }
+    .chakra-container-600{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    .h-30{
+        height: 30px;
+        margin-right: 5px;
+    }
+    .ps-block__header p {
+        color:#000 
+     }
+     .img-fluid{
+         width:100%;
+         border-radius:10px;
+     }
+     .card-yello{
+         width: 100%;
+     height: 100%;
+     text-align: center;
+     background-image: linear-gradient(to bottom, #ffbc01 0%, #f87f01 100%);
+     border-radius: 0.125rem;
+     padding: 15px;
+     isolation: isolate;
+     border-radius: 15px;
+     }
+     .text-white{
+         color: #fff;
+     }
+     .pcmall{
+         font-family: 'Kanit', sans-serif;
+         width: 50px;
+         margin: 5px
+     }
+     .pcmall-dailycheckin{
+         
+         width: 100%;
+         text-align: center;
+         border-radius: 4px;
+         background-color: #f5f5f5;
+         position: relative;
+         margin-bottom: 8px;
+         padding:5px
+     }
+     .card-wh{
+         background-color: #fff;
+     box-shadow: 0px 0px 9px rgb(0 0 0 / 12%);
+     border-radius: 10px;
+     padding: 1.25rem 0;
+     margin-top: 0.75rem;
+     }
+     .pcmall-point{
+         font-size: 14px;
+         font-weight: 600;
+     }
+     .mt-10{
+         margin-top: 10px;
+         margin-bottom: 10px;
+     }
+     .pcmall-dailycheckin_btn{
+         font-family: 'Kanit', sans-serif;
+         display: block;
+     border-radius: 1.875rem;
+     border: none;
+     color: #fff;
+     font-weight: 500;
+     background: none;
+     background-color: #ee4d2d;
+     font-size: 14px;
+     padding: 5px 20px;
+     margin: 1.25rem auto 0;
+     }
+     .pcmall .active{
+         color: #ee4d2d;
+         background-color: #fef6f5;
+     border: 1px solid #ee4d2d;
+     }
+
+     .chakra-coin {
+        width: 20px;
+        height: 20px;
+    }
+ 
+     @media (max-width: 479px) {
+         .card-yello{
+         width: 100%;
+     height: 100%;
+     text-align: center;
+     background-image: linear-gradient(to bottom, #ffbc01 0%, #f87f01 100%);
+     border-radius: 0.125rem;
+     padding: 15px 8px;
+     isolation: isolate;
+     border-radius: 15px;
+     }
+ 
+         .pcmall{
+         font-family: 'Kanit', sans-serif;
+         width: 42px;
+         margin: 2px
+     }
+     .pcmall span{
+         font-family: 'Kanit', sans-serif;
+         font-size: 12px;
+     }
+     .chakra-coin {
+     width: 20px;
+     height: 20px;
+ }
+     .pcmall-dailycheckin{
+         
+         width: 100%;
+         text-align: center;
+         border-radius: 4px;
+         background-color: #f5f5f5;
+         position: relative;
+         margin-bottom: 8px;
+         padding:5px
+     }
+     .card-wh{
+         background-color: #fff;
+     box-shadow: 0px 0px 9px rgb(0 0 0 / 12%);
+     border-radius: 10px;
+     padding: 1.25rem 0;
+     margin-top: 0.75rem;
+     }
+     .pcmall-point{
+         font-size: 11px;
+         font-weight: 600;
+     }
+     .mt-10{
+         margin-top: 10px;
+         margin-bottom: 10px;
+     }
+     .pcmall-dailycheckin_btn{
+         font-family: 'Kanit', sans-serif;
+         display: block;
+     border-radius: 1.875rem;
+     border: none;
+     color: #fff;
+     font-weight: 500;
+     background: none;
+     background-color: #ee4d2d;
+     font-size: 14px;
+     padding: 5px 20px;
+     margin: 1.25rem auto 0;
+     }
+ 
+     }
+ 
+     .pcmall-dailycheckin_btn[data-inactive=true] {
+     color: rgba(0,0,0,.5);
+     background-color: #f6f6f6;
+ }
+ .h-40{
+    height: 40px;
+ }
+ .ps-block__header p {
+    color:#000 
+ }
+ .img-fluid{
+     width:100%;
+     border-radius:10px;
+ }
+ .ps-section__content p {
+     color:#fff;
+     font-size: 18px
+ }
+
+ #wheel {
+ max-height: inherit;
+ width: inherit;
+ top: 0;
+ padding: 0;
+ 
+}
+@keyframes rotate {
+ 100% {
+   transform: rotate(360deg);
+ }
+}
+#spin-btn {
+ position: absolute;
+ transform: translate(-50%, -50%);
+ top: 50%;
+ left: 50%;
+ height: 26%;
+ width: 26%;
+ border-radius: 50%;
+ cursor: pointer;
+ border: 0;
+ background: radial-gradient(#fdcf3b 50%, #d88a40 85%);
+ color: #c66e16;
+ text-transform: uppercase;
+ font-size: 1.8em;
+ letter-spacing: 0.1em;
+ font-weight: 600;
+}
+#spinner-arrow {
+ position: absolute;
+ width: 4em;
+ top: 44%;
+ right: -8%;
+ z-index: 3;
+}
+#final-value {
+ font-size: 1.5em;
+ text-align: center;
+ margin-top: 1.5em;
+ color: #202020;
+ font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+ .wrapper {
+   font-size: 12px;
+ }
+ #spin-btn {
+   right: -5%;
+ }
+}
+#xxx{
+ max-width: 370px;
+ left: -24px;
+ position: absolute;
+ z-index: 1;
+ width: 116%;
+ top: -27px;
+}
+.text-label-bot{
+ position: relative;
+ top: -38px;
+ z-index: 2;
+}
+.ps-table thead > tr > th {
+ font-family: 'Kanit', sans-serif;
+ font-size: 14px
+}
+.ps-table tbody > tr > td {
+ vertical-align: middle;
+ padding: 10px;
+ border: 1px solid #ddd;
+ color: #666;
+}
+.table-responsive {
+ border: 3px solid #b163da;
+}
+.table thead th {
+ border:none
+}
+.table td, .table th {
+ border-top: 1px solid #8b35bc;
+}
+table {
+ background-image: url("{{ url('img/background.jpg') }}");
+}
+#winner{
+width: 130px;
+}
+.box-winner{
+top: -60px;
+ z-index: 2;
+ margin: 0 auto;
+ position: absolute;
+ left: 80px;
+}
+.free-spin-day{
+font-size: 20px;
+ color: #8b35bc;
+}
+.chakra-coin{
+width: 24px;
+height: 24px;
+}
+.chakra-coin2{
+width: 20px;
+height: 20px;
+}
+#label_wheel{
+    width: 100%;
+}
