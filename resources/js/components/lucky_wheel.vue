@@ -153,6 +153,7 @@ export default {
             },
             getWheel(){
                 // ดึงข้อมูลรางวัลทั้งหมดออกมา DB wheelsetting 
+                // รางวัลที่ออกมานั้นมากจาก percent ของ wheelsetting ที่ตั้งไว้
                  axios.get('/data_wheel')
                      .then((response)=>{
                         this.rotationValues = response.data;
@@ -223,6 +224,7 @@ export default {
                                     this.check_wheel_turn = 1
                                     // หักลบกับส่วนที่ใช้ coin ในการหมุนอัพเดท coin อีกรอบ
                                     // รอบที่สะสมไม่ได้มาจาก users->point แต่เกิดจาการ sum ใน DB points ที่ type = 0 
+                                    // ตั้งค่าการเสีย coin จากการหมุนที่ DB settings -> coint_turn ตั้งค่าเท่าไหร่ก็ได้
                                     this.total_mycoin = this.total_mycoin + response.data.coin_return
 
                                 }

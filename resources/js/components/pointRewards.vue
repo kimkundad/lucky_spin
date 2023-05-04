@@ -105,6 +105,7 @@ export default {
                      })
             },
             getPoint : function(event) {
+                // ตั้งค่ารางวัลอยู่ที่ DB settings (วันแรก : first_day , ช่วงหลังวันแรกและก่อนวันสุดท้าย mid_day, วันสุดท้าย : last_day)
                 axios.get('/getPoint').then((response) => {
                 this.apiData = response.data
                 this.isButtonDisabled = true;
