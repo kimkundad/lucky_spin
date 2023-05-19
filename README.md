@@ -12,8 +12,10 @@
 1. สร้างไฟล์ .env เชื่อมต่อ DB
 2. composer update
 3. php artisan key:generate
-4. npm install
-5. npm run dev
-6. php artisan serve
+4. php artisan migrate
+5. php artisan migrate:fresh --seed
+6. npm install
+7. npm run dev
+8. php artisan serve
 
 php version 8.0 ขึ้นไป
