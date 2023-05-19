@@ -31,14 +31,13 @@ class AuthController extends Controller
 
     public function user()
     {
-       dd(auth()->user());
-
         return response([
             'user' => auth()->user()
         ], Response::HTTP_OK);
     }
 
     public function logout(){
+
         return response([
             'user' => auth()->logout()
         ], Response::HTTP_OK);

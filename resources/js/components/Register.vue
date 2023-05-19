@@ -1,8 +1,8 @@
 <template>
-    <div class="container h-100">
+    <div class="container h-100" style="margin-top:50px">
         <div class="row h-100 align-items-center">
-            <div class="col-12 col-md-6 offset-md-3">
-                <div class="card shadow sm">
+            <div class="col-12 col-md-8 offset-md-1">
+                <div class="card shadow sm card-x-design">
                     <div class="card-body">
                         <h1 class="text-center">Register</h1>
                         <hr/>

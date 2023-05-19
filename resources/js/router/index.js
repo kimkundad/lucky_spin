@@ -87,23 +87,6 @@ const routes = [
             }
         ]
     },
-    {
-        path: "/lucky_wheel2",
-        component: DahboardLayout,
-        meta: {
-            middleware: "auth"
-        },
-        children: [
-            {
-                name: "lucky_wheel2",
-                path: '/lucky_wheel2',
-                component: lucky_wheel2,
-                meta: {
-                    title: `lucky_wheel2`
-                }
-            }
-        ]
-    },
 ]
 
 const router = createRouter({

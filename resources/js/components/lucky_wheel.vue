@@ -1,8 +1,8 @@
 <template lang="">
     <div>
-        <h2>{{ header }} ( <img src="/img/coin.png" class="chakra-coin">  {{ total_mycoin }} )</h2>
+        <h2 style="color: #fff;">{{ header }} ( <img src="/img/coin.png" class="chakra-coin">  {{ total_mycoin }} )</h2>
 
-        <div class="ps-checkout ps-section--shopping" style="background-color: #fff; padding: 30px 0px 200px 0px">
+        <div class="ps-checkout ps-section--shopping" style="background-color: rgb(255 255 255 / 14%); padding: 30px 0px 200px 0px">
             <div class="container">
                 <div class="ps-section__content ">
                     <div class="row justify-content-md-center">
@@ -137,7 +137,10 @@ export default {
                 updateProfile:'auth/updateprofile'
             }),
             getSpin_wheel_data(){
-                axios.get('/spin_wheel')
+                const config = {
+                    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+                };
+                axios.get('/spin_wheel', config)
                      .then((response)=>{
                         this.free_wheel = response.data.free_wheel
                         this.total_mycoin = response.data.data_user_point
@@ -145,8 +148,11 @@ export default {
                     })
             },
             data_labels(){
+                const config = {
+                    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+                };
                 // ดึงข้อมูลมาแสดงที่ Labels ของ chart
-                axios.get('/data_labels')
+                axios.get('/data_labels', config)
                      .then((response)=>{
                         this.datalabels = response.data
                     })
@@ -154,7 +160,10 @@ export default {
             getWheel(){
                 // ดึงข้อมูลรางวัลทั้งหมดออกมา DB wheelsetting 
                 // รางวัลที่ออกมานั้นมากจาก percent ของ wheelsetting ที่ตั้งไว้
-                 axios.get('/data_wheel')
+                const config = {
+                    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+                };
+                 axios.get('/data_wheel', config)
                      .then((response)=>{
                         this.rotationValues = response.data;
                      })
@@ -178,7 +187,10 @@ export default {
                 let resultValue = 101;
                 
                 // ดึงข้อมูลว่าเราหมุนได้รางวัลอะไรออกมา
-                await axios.post('/addwheelresult')
+                
+                await axios.get('/addwheelresult', {
+                    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+                })
                      .then((response)=>{
 
                         //disabled ปุ่ม ไม่ให้กดซ้ำ

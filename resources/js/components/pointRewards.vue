@@ -1,6 +1,6 @@
 <template lang="">
     <div>
-        <h2>{{ header }}</h2>
+        <h2 style="color: #fff;">{{ header }}</h2>
             <div class="ps-section__content">
                 <div class="card-yello text-center">
                     <h4 class="text-white">Cavia168 Point Rewards</h4>
@@ -81,7 +81,9 @@ export default {
                 updateProfile:'auth/updateprofile'
             }),
             getUser(){
-                axios.get('/get_point_reward')
+                axios.get('/get_point_reward', {
+                    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+                })
                      .then((response)=>{
                        let spinBtn = document.getElementById("dailycheckin_btn");
                        this.check_point_day = response.data.check_point_day
@@ -106,7 +108,9 @@ export default {
             },
             getPoint : function(event) {
                 // ตั้งค่ารางวัลอยู่ที่ DB settings (วันแรก : first_day , ช่วงหลังวันแรกและก่อนวันสุดท้าย mid_day, วันสุดท้าย : last_day)
-                axios.get('/getPoint').then((response) => {
+                axios.get('/getPoint', {
+                    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+                }).then((response) => {
                 this.apiData = response.data
                 this.isButtonDisabled = true;
                 if(response.data.success == true){

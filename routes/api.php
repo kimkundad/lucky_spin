@@ -28,7 +28,7 @@ Route::middleware('auth:api')->group( function () {
     Route::get('spin_wheel', [ApiController::class, 'spin_wheel']);
     Route::get('data_wheel', [ApiController::class, 'data_wheel']);
     Route::get('data_labels', [ApiController::class, 'data_labels']);
-    Route::post('addwheelresult', [ApiController::class, 'addwheelresult']);
+    Route::get('addwheelresult', [ApiController::class, 'addwheelresult']);
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {

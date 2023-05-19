@@ -1,3 +1,11 @@
+body{
+    background-color: #0a0a0a;
+    background-image: url(../img/Mesa-de-trabajo-1@1500x-80.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 body, html,h1,h2,h3,h4,h5,h6,p,span,strong,a{
     font-family: 'Kanit', sans-serif;
     }
@@ -271,7 +279,7 @@ top: -60px;
 }
 .free-spin-day{
 font-size: 20px;
- color: #8b35bc;
+ color: #fff;
 }
 .chakra-coin{
 width: 24px;
@@ -283,4 +291,51 @@ height: 20px;
 }
 #label_wheel{
     width: 100%;
+}
+.card-x-design{
+    background-color: #00000038 !important;
+    color: #fff;
+    border: 1px solid #7e7cff !important;
+}
+.bg-dark-x{
+    height: 55px;
+    background: rgb(57, 26, 104);
+    background-size: cover;
+    flex-direction: column;
+    display: flex;
+    box-shadow: 0 0 10px black;
+}
+.mt-80{
+    margin-top: 20px;
+}
+.set-nav-new{
+    /* padding: 15px;
+    background: rgb(57, 26, 104);
+    z-index: 99; */
+    z-index: 99;
+}
+.me-auto {
+    background: rgb(57, 26, 104);
+    z-index: 99;
+
+}
+.nav-x{
+    background: rgb(57, 26, 104);
+    z-index: 99;
+}
+
+@media screen and (max-width: 985px) {
+
+    .me-auto {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .nav-x{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .nav-link {
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
 }

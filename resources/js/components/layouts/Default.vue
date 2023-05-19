@@ -1,12 +1,12 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark-x">
             <div class="container-fluid">
-                <router-link :to="{name:'dashboard'}" class="navbar-brand">Kim VueJs</router-link>
+                <router-link :to="{name:'dashboard'}" class="navbar-brand">Home</router-link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="collapse navbar-collapse set-nav-new" id="navbarNavDropdown">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <router-link :to="{name:'pointRewards'}" class="nav-link">pointRewards</router-link>
@@ -15,7 +15,7 @@
                             <router-link :to="{name:'lucky_wheel'}" class="nav-link">lucky_wheel</router-link>
                         </li>
                     </ul>
-                    <div class="d-flex">
+                    <div class="d-flex nav-x">
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </nav>
-        <main class="mt-3">
+        <main class="mt-80">
             <router-view></router-view>
         </main>
     </div>

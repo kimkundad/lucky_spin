@@ -2,20 +2,21 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="card shadow-sm">
-                    <div class="card-header">
-                        <h3>Dashboard</h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="mb-0">You are logged in as <b>{{user.email}}</b></p>
-                    </div>
-                </div>
+                <router-link :to="{name:'lucky_wheel'}">
+                    <img src="/img/xx1.jpg" class="img-fluid"> 
+                    <p class="text-white">แบนเนอร์ ที่ลิงค์ไปยัง หมุนวงล้อนำโชค</p>
+                </router-link>
+                <router-link :to="{name:'pointRewards'}">
+                    <img src="/img/PR2023-Summoner-War-HNY-event-2.jpg" class="img-fluid"> 
+                    <p class="text-white">แบนเนอร์ ที่ลิงค์ไปยัง กิจกรรมเช็คอินทุกวันเพื่อรับ Points</p>
+                </router-link>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+console.log("Welcome", localStorage.getItem('token'))
 export default {
     name:"dashboard",
     data(){

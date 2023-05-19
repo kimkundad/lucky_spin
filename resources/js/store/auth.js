@@ -25,7 +25,10 @@ export default {
     },
     actions:{
         login({commit}){
-            return axios.get('/user').then(({data})=>{
+            const config = {
+                headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+            };
+            return axios.get('/user', config).then(({data})=>{
                 console.log('-->data -->',data);
                 commit('SET_USER',data)
                 commit('SET_AUTHENTICATED',true)
@@ -38,6 +41,7 @@ export default {
         logout({commit}){
             commit('SET_USER',{})
             commit('SET_AUTHENTICATED',false)
+            localStorage.removeItem('token');
         },
         updateprofile({commit}){
             return axios.get('/user').then(({data})=>{

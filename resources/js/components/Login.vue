@@ -1,8 +1,8 @@
 <template>
-    <div class="container h-100">
+    <div class="container h-100" style="margin-top:50px">
         <div class="row h-100 align-items-center">
-            <div class="col-12 col-md-6 offset-md-3">
-                <div class="card shadow sm">
+            <div class="col-12 col-md-8 offset-md-1">
+                <div class="card shadow sm card-x-design">
                     <div class="card-body">
                         <h1 class="text-center">Login</h1>
                         <hr/>
@@ -58,11 +58,12 @@ export default {
         }),
         async login(){
             this.processing = true
+            localStorage.removeItem('token');
             await axios.get('/sanctum/csrf-cookie')
             const response = await axios.post('/login',this.auth).then(({data})=>{
                // 
                localStorage.setItem('token', data.access_token);
-               console.log('access_token: ',data.access_token)
+               console.log('user_data: ',data.user)
                this.signIn()
             }).catch(({response})=>{
                 if(response.status===422){
@@ -75,7 +76,6 @@ export default {
                 this.processing = false
             })
 
-           
         },
     }
 }
