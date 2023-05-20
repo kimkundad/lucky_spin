@@ -15,8 +15,8 @@
                                 </div>
                             </div>
                             <div class="form-group col-12">
-                                <label for="email" class="font-weight-bold">Email</label>
-                                <input type="text" v-model="auth.email" name="email" id="email" class="form-control">
+                                <label for="phone" class="font-weight-bold">Phone number</label>
+                                <input type="text" v-model="auth.phone" name="phone" id="phone" class="form-control">
                             </div>
                             <div class="form-group col-12 my-2">
                                 <label for="password" class="font-weight-bold">Password</label>
@@ -45,7 +45,7 @@ export default {
     data(){
         return {
             auth:{
-                email:"",
+                phone:"",
                 password:""
             },
             validationErrors:{},

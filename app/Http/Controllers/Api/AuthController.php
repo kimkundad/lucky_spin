@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Validation\Rules;
 use Auth;
-
+use Validator;
 
 
 class AuthController extends Controller
@@ -19,7 +19,7 @@ class AuthController extends Controller
         if (auth()->attempt($request->all())) {
             return response([
                 'user' => auth()->user(),
-                'access_token' => auth()->user()->createToken('qbsDC4Tn4z7gCnGbFoyQamC7sOdx9velpl6FUJzT')->accessToken
+                'access_token' => auth()->user()->createToken('owtzzmRK6dyW1J0SygtIV7syWKkwAVFUALsa2b9W')->accessToken
             ], Response::HTTP_OK);
         }
 
@@ -47,16 +47,19 @@ class AuthController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'phone' => 'required|string|max:12',
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
         $user = User::create([
             'name' => $request->name,
-            'email' => $request->email,
+            'phone' => $request->phone,
             'password' => Hash::make($request->password)
         ]);
 
 
-        return response($user, Response::HTTP_CREATED);
+        return response([
+            'user' => $user,
+            'msg_status' => 'register_success'
+        ], Response::HTTP_CREATED);
     }
 }

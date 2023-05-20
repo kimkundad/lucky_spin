@@ -19,6 +19,7 @@
     "dependencies": {
         "chart.js": "^4.2.1",
         "chartjs-plugin-datalabels": "^2.2.0",
+        "sweetalert2": "^11.7.5",
         "vue-chartjs": "^5.2.0",
         "vue-fortune-wheel": "^1.0.3",
         "vue-loader": "^17.0.1",

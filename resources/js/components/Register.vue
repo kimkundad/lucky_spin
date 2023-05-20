@@ -19,8 +19,8 @@
                                 <input type="text" name="name" v-model="user.name" id="name" placeholder="Enter name" class="form-control">
                             </div>
                             <div class="form-group col-12 my-2">
-                                <label for="email" class="font-weight-bold">Email</label>
-                                <input type="text" name="email" v-model="user.email" id="email" placeholder="Enter Email" class="form-control">
+                                <label for="phone" class="font-weight-bold">Phone Number</label>
+                                <input type="text" name="phone" v-model="user.phone" id="phone" placeholder="Enter Phone Number" class="form-control">
                             </div>
                             <div class="form-group col-12">
                                 <label for="password" class="font-weight-bold">Password</label>
@@ -28,7 +28,7 @@
                             </div>
                             <div class="form-group col-12 my-2">
                                 <label for="password_confirmation" class="font-weight-bold">Confirm Password</label>
-                                <input type="password_confirmation" name="password_confirmation" v-model="user.password_confirmation" id="password_confirmation" placeholder="Enter Password" class="form-control">
+                                <input type="password" name="password_confirmation" v-model="user.password_confirmation" id="password_confirmation" placeholder="Enter Password" class="form-control">
                             </div>
                             <div class="col-12 mb-2">
                                 <button type="submit" :disabled="processing" class="btn btn-primary btn-block">
@@ -48,13 +48,14 @@
 
 <script>
 import { mapActions } from 'vuex'
+import Swal from 'sweetalert2'
 export default {
     name:'register',
     data(){
         return {
             user:{
                 name:"",
-                email:"",
+                phone:"",
                 password:"",
                 password_confirmation:""
             },
@@ -71,7 +72,20 @@ export default {
             await axios.get('/sanctum/csrf-cookie')
             await axios.post('/register',this.user).then(response=>{
                 this.validationErrors = {}
-                this.signIn()
+                
+                if(response.data.msg_status === 'register_success'){
+                    Swal.fire(
+                    'ลงทะเบียน!',
+                    'กรุณากรอกยูสเนมเข้าสู่ระบบอีกครั้ง!',
+                    'success'
+                    )
+                    setTimeout(function(){
+                    window.location.replace("/");
+                    }, 3000);
+                }
+                console.log('user_register: ', response.data)
+                
+
             }).catch(({response})=>{
                 if(response.status===422){
                     this.validationErrors = response.data.errors
