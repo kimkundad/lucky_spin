@@ -19,7 +19,7 @@ class AuthController extends Controller
         if (auth()->attempt($request->all())) {
             return response([
                 'user' => auth()->user(),
-                'access_token' => auth()->user()->createToken('owtzzmRK6dyW1J0SygtIV7syWKkwAVFUALsa2b9W')->accessToken
+                'access_token' => auth()->user()->createToken('Uy7p4XAZAaD1vO3NNLaW5C6HpBpEBxiLQXKBNbqo')->accessToken
             ], Response::HTTP_OK);
         }
 
