@@ -15,7 +15,6 @@ const Dashboard = () => import('@/components/Dashboard.vue')
 
 const pointRewards = () => import('@/components/pointRewards.vue')
 const lucky_wheel = () => import('@/components/lucky_wheel.vue')
-const lucky_wheel2 = () => import('@/components/lucky_wheel2.vue')
 
 const routes = [
     {

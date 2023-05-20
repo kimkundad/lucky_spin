@@ -1,6 +1,6 @@
 <template lang="">
     <div>
-        <h2 style="color: #fff;">{{ header }} ( <img src="/img/coin.png" class="chakra-coin">  {{ total_mycoin }} )</h2>
+        <h2 style="color: #fff;">{{ header }} ( <img :src="'img/coin.png'" class="chakra-coin">  {{ total_mycoin }} )</h2>
 
         <div class="ps-checkout ps-section--shopping" style="background-color: rgb(255 255 255 / 14%); padding: 30px 0px 200px 0px">
             <div class="container">
@@ -16,29 +16,29 @@
 
                                     <div v-if="coin_recive == 0">
                                         <h2 class="free-spin-day" id="free-spin-dayx">
-                                        <img src="/img/coin.png" class="chakra-coin"> 
+                                        <img :src="'img/coin.png'" class="chakra-coin"> 
                                         ได้รับ {{ coin_recive }} coin </h2><br>
                                     </div>
                                     <div v-else>
                                         <h2 class="free-spin-day" id="free-spin-dayx">
-                                        <img src="/img/coin.png" class="chakra-coin"> 
+                                        <img :src="'img/coin.png'" class="chakra-coin"> 
                                         หมุนกงล้อมหาสนุกได้ {{ coin_recive }} point</h2><br>
                                     </div>
                                     
                                 </div>
                             </div>
                             <div style="max-width:300px; margin: 0 auto; position: relative;" class="justify-content-md-center">
-                                <img id="xxx" src="/img/2159559-22222.png" alt="spinner-bg" /> 
+                                <img id="xxx" :src="'img/2159559-22222.png'" alt="spinner-bg" /> 
                                     <div style="position: relative; z-index: 2;">
 
                                         <Pie :data="chartData" :options="chartOption" />
 
                                         <button v-on:click="onClickRotate()"  id="spin-btn">Spin</button>
-                                        <img id="spinner-arrow" src="/img/spinner-arrow-.svg" alt="spinner-arrow" />
+                                        <img id="spinner-arrow" :src="'img/spinner-arrow-.svg'" alt="spinner-arrow" />
                                     </div>
                                     <div id="final-value">
                                         <div style="position: relative; z-index: 2; ">
-                                            <img id="label_wheel" src="/img/label_wheel.png" alt="label_wheel" /> 
+                                            <img id="label_wheel" :src="'img/label_wheel.png'" alt="label_wheel" /> 
                                             <p id="final-text" class="text-white text-label-bot">คลิกที่ปุ่ม Spin เพื่อเริ่มเกมส์</p>
                                            
                                         </div>

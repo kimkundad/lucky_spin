@@ -5,7 +5,7 @@
                 <div class="card-yello text-center">
                     <h4 class="text-white">Cavia168 Point Rewards</h4>
                     <div class="d-flex justify-content-center">
-                        <img class="h-30" src="/img/coin.png" >
+                        <img class="h-30" :src="'/img/coin.png'" >
                         <h2 class="text-white" id="my_point_old">{{ user.point }}</h2>
                     </div>
 
@@ -16,15 +16,15 @@
                                 <div v-if="i <= check_point_day" :id="'sp_' + i" class="pcmall-dailycheckin active">
 
                                     <div v-if="i === 1" class="pcmall-point ">
-                                        <img src="/img/coin.png" class="chakra-coin mt-10" />
+                                        <img :src="'/img/coin.png'" class="chakra-coin mt-10" />
                                         <div>+ {{first_day}}</div>
                                     </div>
                                     <div v-else-if="i > 1 && i < 7" class="pcmall-point">
-                                        <img src="/img/coin.png" class="chakra-coin mt-10" />
+                                        <img :src="'/img/coin.png'" class="chakra-coin mt-10" />
                                         <div>+ {{mid_day}}</div>
                                     </div>
                                     <div v-else class="pcmall-point">
-                                        <img src="/img/coin.png" class="chakra-coin mt-10" />
+                                        <img :src="'/img/coin.png'" class="chakra-coin mt-10" />
                                         <div>+ {{last_day}}</div>
                                     </div>
                                         <span>วันที่ {{ i }}</span>
@@ -32,15 +32,15 @@
 
                                 <div v-else :id="'sp_' + i" class="pcmall-dailycheckin ">
                                     <div v-if="i === 1" class="pcmall-point">
-                                        <img src="/img/coin.png" class="chakra-coin mt-10" />
+                                        <img :src="'/img/coin.png'" class="chakra-coin mt-10" />
                                         <div>+ {{first_day}}</div>
                                     </div>
                                     <div v-else-if="i > 1 && i < 7" class="pcmall-point">
-                                        <img src="/img/coin.png" class="chakra-coin mt-10" />
+                                        <img :src="'/img/coin.png'" class="chakra-coin mt-10" />
                                         <div> + {{mid_day}}</div>
                                     </div>
                                     <div v-else class="pcmall-point">
-                                        <img src="/img/coin.png" class="chakra-coin mt-10" />
+                                        <img :src="'/img/coin.png'" class="chakra-coin mt-10" />
                                         <div> + {{last_day}}</div>
                                     </div>
                                         <span>วันที่ {{ i }}</span>
