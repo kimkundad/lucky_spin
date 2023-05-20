@@ -11,6 +11,12 @@ export default defineConfig({
         ]),
         vue(),
     ],
+    server: {
+        host: '0.0.0.0',
+        hmr: {
+            host: 'localhost'
+        }
+    },
     resolve: {
         alias: {
             '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
