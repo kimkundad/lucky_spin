@@ -12,11 +12,8 @@ export default defineConfig({
         vue(),
     ],
     server: {
-        host: '0.0.0.0',
-        hmr: {
-            host: '139.59.227.198'
-        }
-    },
+        port: 8000,
+     },
     resolve: {
         alias: {
             '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
