@@ -8,7 +8,7 @@ use App\Models\point_reward;
 use App\Models\point;
 use App\Models\User;
 use Validator;
-use App\Http\Controllers\API\BaseController as BaseController;
+use App\Http\Controllers\Api\BaseController as BaseController;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\DB;
 
