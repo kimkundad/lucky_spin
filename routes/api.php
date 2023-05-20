@@ -21,6 +21,10 @@ Route::post('register', [AuthController::class, 'register']);
 
 Route::post('logout', [AuthController::class, 'logout']);
 
+// ใช้ยิง cronjob ทุกวันหลังเที่ยงคืน ลบคนที่เช็คอินรายวันได้ 7 วันแล้ว
+//http://localhost:8000/api/delete_point_reward_all
+Route::get('delete_point_reward_all', [ApiController::class, 'delete_point_reward_all']);
+
 Route::middleware('auth:api')->group( function () {
     Route::get('get_user', [ApiController::class, 'get_user']);
     Route::get('get_point_reward', [ApiController::class, 'get_point_reward']);

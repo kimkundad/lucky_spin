@@ -26,6 +26,26 @@ class ApiController extends BaseController
         ], Response::HTTP_OK);
     }
 
+    public function delete_point_reward_all()
+    {
+
+        $user_info = DB::table('point_rewards')
+                 ->select('user_id', DB::raw('count(*) as id'))
+                 ->groupBy('user_id')
+                 ->get();
+
+        foreach($user_info as $u){
+            if($u->id == 7){
+                DB::table('point_rewards')->where('user_id', $u->user_id)->delete();
+            }
+        }
+
+        return response([
+            'msg' => 'ลบข้อมูลสำเร็จแล้ว',
+            'user' => $user_info
+        ], Response::HTTP_OK);
+    }
+
     public function get_point_reward(){
 
         $set = DB::table('settings')
